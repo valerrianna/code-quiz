@@ -32,13 +32,13 @@ var result = document.getElementById("result")
 var questionNumber = 0;
 
 var allScores = []
-var storedScores = JSON.parse(localStorage.getItem("userData"));
+var scoresStorage = JSON.parse(localStorage.getItem("userData"));
 
 //when we click the start quiz, the quiz starts
 
 function startQuiz() {
-    if(storedScores !==null) {
-        allScores = storedScores;
+    if(scoresStorage !==null) {
+        allScores = scoresStorage;
     }
     var introduction = document.getElementById("intro");
     introduction.parentNode.removeChild(introduction);
@@ -140,7 +140,7 @@ function createScoreBoard () {
     var playerNameInput = playerName.textContent
     console.log(name)
     localStorage.setItem("playerNameInputs", name);
-    var storedScores = JSON.parse(localStorage.getItem("userData"));
+    var scoresStorage = JSON.parse(localStorage.getItem("userData"));
     localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
 
 }
@@ -161,12 +161,12 @@ function scoreboard (x,y) {
 }
 
 // function displayScores() {
-//     if (storedScores !== null) {
+//     if (scoresStorage !== null) {
 //         var scoreList = document.createElement("ol");
 //         scoreList.className = "scoreListClass";
-//         for (var i = 0; i < storedScores.length; i++) {
-//             var initials = storedScores[i].inits;
-//             var scores = storedScores[i].userScore
+//         for (var i = 0; i < scoresStorage.length; i++) {
+//             var initials = scoresStorage[i].inits;
+//             var scores = scoresStorage[i].userScore
 //             var scoreEntry = document.createElement("li");
 //             scoreEntry.innerHTML = initials + " - " + scores;
 //             scoreList.appendChild(scoreEntry);

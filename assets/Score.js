@@ -1,13 +1,13 @@
-var storedScores = JSON.parse(localStorage.getItem("userData"));
+var scoresStorage = JSON.parse(localStorage.getItem("userData"));
 var highScoresArea = document.querySelector("#highscore-list");
 
 function displayScores() {
-    if (storedScores !== null) {
+    if (scoresStorage !== null) {
         var scoreList = document.createElement("ol");
         scoreList.className = "scoreListClass";
-        for (var i = 0; i < storedScores.length; i++) {
-            var initials = storedScores[i].inits;
-            var scores = storedScores[i].userScore
+        for (var i = 0; i < scoresStorage.length; i++) {
+            var initials = scoresStorage[i].inits;
+            var scores = scoresStorage[i].userScore
             var scoreEntry = document.createElement("li");
             scoreEntry.innerHTML = initials + " - " + scores;
             scoreList.appendChild(scoreEntry);
