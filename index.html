@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body>
 
-    <div class="quiz-container">
-        <div id="question"></div>
-        <button id="option1"></button>
-        <button id="option2"></button>
-        <button id="option3"></button>
-        <button id="option4"></button>
-    </div>
-    
-    <div id="results"></div>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#add-score">Highscore Board</a>
+        <progres value="0" max="75" id="timer"></progress>
+      </nav>
 
-    <script src="./assets/js/script.js"></script>
+    <div id ="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit. 
+            Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+        </p>
+        <button id="start">Start Quiz</button>
+    </div>
+
+    <div id="question-box">
+        <h1 id="display-question"></h1>
+        <div id="question-list">
+
+        </div>
+    </div>
+
+    <div>
+        <h2 id="result"></h2>
+    </div>
+
+    <div id="add-score">
+
+    </div>
+
+    <script src="./assets/script.js"></script>
 </body>
 </html>
